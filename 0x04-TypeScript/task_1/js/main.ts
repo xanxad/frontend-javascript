@@ -1,25 +1,13 @@
-// Teacher Interface
-interface Teacher {
-  readonly firstName: string;
-  readonly lastName: string;
-  fullTimeEmployee: boolean;
-  yearsOfExperience?: number; // Optional attribute
-  location: string;
-  [key: string]: any; // Allows additional properties with any name
+// Define the interface for the function
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
 }
 
-// Directors Interface extending Teacher
-interface Directors extends Teacher {
-  numberOfReports: number; // Required attribute for Directors
-}
-
-// Example usage
-const director1: Directors = {
-  firstName: "John",
-  lastName: "Doe",
-  location: "London",
-  fullTimeEmployee: true,
-  numberOfReports: 17,
+// Function implementation
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-console.log(director1);
+// Example usage
+console.log(printTeacher("John", "Doe")); // Should print: J. Doe
+console.log(printTeacher("Jane", "Smith")); // Should print: J. Smith

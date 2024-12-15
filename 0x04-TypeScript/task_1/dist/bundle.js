@@ -16,7 +16,7 @@
   \********************/
 /***/ (() => {
 
-eval("\n// Example usage\nvar director1 = {\n    firstName: \"John\",\n    lastName: \"Doe\",\n    location: \"London\",\n    fullTimeEmployee: true,\n    numberOfReports: 17,\n};\nconsole.log(director1);\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
+eval("\n// Function implementation\nvar printTeacher = function (firstName, lastName) {\n    return \"\".concat(firstName.charAt(0), \". \").concat(lastName);\n};\n// Example usage\nconsole.log(printTeacher(\"John\", \"Doe\")); // Should print: J. Doe\nconsole.log(printTeacher(\"Jane\", \"Smith\")); // Should print: J. Smith\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
 
 /***/ })
 
