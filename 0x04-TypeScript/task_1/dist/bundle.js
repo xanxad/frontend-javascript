@@ -16,7 +16,7 @@
   \********************/
 /***/ (() => {
 
-eval("\n// Function implementation\nvar printTeacher = function (firstName, lastName) {\n    return \"\".concat(firstName.charAt(0), \". \").concat(lastName);\n};\n// Example usage\nconsole.log(printTeacher(\"John\", \"Doe\")); // Should print: J. Doe\nconsole.log(printTeacher(\"Jane\", \"Smith\")); // Should print: J. Smith\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
+eval("\n// Class implementation based on the interfaces\nvar StudentClassImpl = /** @class */ (function () {\n    // Constructor accepts firstName and lastName as arguments\n    function StudentClassImpl(firstName, lastName) {\n        this.firstName = firstName;\n        this.lastName = lastName;\n    }\n    // Method that returns a string message\n    StudentClassImpl.prototype.workOnHomework = function () {\n        return \"Currently working\";\n    };\n    // Method that returns the first name of the student\n    StudentClassImpl.prototype.displayName = function () {\n        return this.firstName;\n    };\n    return StudentClassImpl;\n}());\n// Example usage\nvar student1 = new StudentClassImpl(\"John\", \"Doe\");\nconsole.log(student1.displayName()); // Should print: John\nconsole.log(student1.workOnHomework()); // Should print: Currently working\n\n\n//# sourceURL=webpack://task_1/./js/main.ts?");
 
 /***/ })
 
